@@ -4,10 +4,12 @@ from telegram.ext import Application, CommandHandler, ContextTypes
 import requests
 from dateutil import parser
 
+
+import os
+
 # Leer el token del entorno
 TOKEN = os.getenv("TELEGRAM_TOKEN")
-if not TOKEN:
-    raise ValueError("El token de Telegram no está configurado en las variables de entorno.")
+
 
 # Función para convertir la fecha en formato ISO 8601 a un formato legible
 def format_date(iso_date_str):
