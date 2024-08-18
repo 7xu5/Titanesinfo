@@ -4,7 +4,11 @@ import requests
 from dateutil import parser
 
 # Token del bot de Telegram
-TOKEN = "7174911284:AAEBErndS8AOgszlMKiiBYJc9CanYdDzGOk"
+import os
+
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+
+application = Application.builder().token(TOKEN).build()
 
 # Función para convertir la fecha en formato ISO 8601 a un formato legible
 def format_date(iso_date_str):
