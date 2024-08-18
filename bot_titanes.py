@@ -53,7 +53,7 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 progress_percentage = current_heart_progress * 100
 
                 message += "\n\n🟢 Maelstrom Completamente Vulnerable \n"
-                message += f"\n"
+                message += f" \n"
                 message += f"Nombre: {name}\n"
                 message += f"Sistema: {system_name}\n"
                 message += f"Corazones Restantes: {hearts_remaining}\n"
@@ -73,7 +73,7 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                     system_name = maelstrom.get("systemName", "N/A")
                     hearts_remaining = maelstrom.get("heartsRemaining", "0")
 
-                    message += f"\n"
+                    message += f" \n"
                     message += f"Nombre: {name}\n"
                     message += f"Sistema: {system_name}\n"
                     message += f"Corazones Restantes: {hearts_remaining}\n"
@@ -92,7 +92,7 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                     hearts_remaining = maelstrom.get("heartsRemaining", 0)
                     tiempo_destruccion = format_date(maelstrom.get("meltdownTimeEstimate", "N/A"))
                     
-                    message += f"\n"
+                    message += f" \n"
                     message += f"Nombre: {name}\n"
                     message += f"Sistema: {system_name}\n"
                     message += f"Corazones Restantes: {hearts_remaining}\n"
