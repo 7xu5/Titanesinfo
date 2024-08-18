@@ -53,7 +53,7 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 progress_percentage = current_heart_progress * 100
 
                 message += "\n\n🟢 Maelstrom Completamente Vulnerable \n"
-                message += f"Nombre: {name}\n"
+                message += f"\nNombre: {name}\n"
                 message += f"Sistema: {system_name}\n"
                 message += f"Corazones Restantes: {hearts_remaining}\n"
                 message += f"Progreso de Corazones: {progress_percentage}%\n"
