@@ -72,11 +72,13 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                     name = maelstrom.get("name", "N/A")
                     system_name = maelstrom.get("systemName", "N/A")
                     hearts_remaining = maelstrom.get("heartsRemaining", "0")
+                    systems_controlled = maelstrom.get("systemsThargoidControlled", "0")
 
                     message += f" \n"
                     message += f"Nombre: {name}\n"
                     message += f"Sistema: {system_name}\n"
                     message += f"Corazones Restantes: {hearts_remaining}\n"
+                    message += f"Sistemas Controlados: {systems_controlled}\n"
                     message += "-"*44 + "\n"
             else:
                 message += "\n\nNo hay maelstroms activos.\n"
