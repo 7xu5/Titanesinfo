@@ -58,7 +58,7 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 message += f"Corazones Restantes: {hearts_remaining}\n"
                 message += f"Progreso de Corazones: {progress_percentage}%\n"
                 message += f"Fecha de Destrucción Estimada: {tiempo_estimado}\n"
-                message += "-"*50 + "\n"
+                message += "-"*44 + "\n"
             else:
                 message += "\n\nNo hay maelstroms completamente vulnerables.\n"
 
@@ -75,7 +75,7 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                     message += f"Nombre: {name}\n"
                     message += f"Sistema: {system_name}\n"
                     message += f"Corazones Restantes: {hearts_remaining}\n"
-                    message += "-"*50 + "\n"
+                    message += "-"*44 + "\n"
             else:
                 message += "\n\nNo hay maelstroms activos.\n"
 
@@ -94,7 +94,7 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                     message += f"Sistema: {system_name}\n"
                     message += f"Corazones Restantes: {hearts_remaining}\n"
                     message += f"Fecha de Destrucción: {tiempo_destruccion}\n"
-                    message += "-"*50 + "\n"
+                    message += "-"*44 + "\n"
             else:
                 message += "\n\nNo hay maelstroms destruidos.\n"
 
