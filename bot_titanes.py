@@ -50,7 +50,7 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 total_hearts = maelstrom_vulnerable.get("totalHearts", 0)
                 current_heart_progress = maelstrom_vulnerable.get("heartProgress", 0)
                 tiempo_estimado = format_date(maelstrom_vulnerable.get("completionTimeEstimate", "N/A"))
-                progress_percentage = calculate_progress(current_heart_progress*100)
+                progress_percentage = current_heart_progress*100
 
                 message += "\n\n🟢 Maelstrom Completamente Vulnerable \n"
                 message += f"Nombre: {name}\n"
