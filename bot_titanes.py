@@ -50,9 +50,9 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 total_hearts = maelstrom_vulnerable.get("totalHearts", 0)
                 current_heart_progress = maelstrom_vulnerable.get("currentHeartProgress", 0)
                 tiempo_estimado = format_date(maelstrom_vulnerable.get("completionTimeEstimate", "N/A"))
-                progress_percentage = calculate_progress(current_heart_progress, total_hearts)
+                progress_percentage = calculate_progress(current_heart_progress*100)
 
-                message += "\n\n🟢 Maelstrom Completamente Vulnerable 🟢\n"
+                message += "\n\n🟢 Maelstrom Completamente Vulnerable \n"
                 message += f"Nombre: {name}\n"
                 message += f"Sistema: {system_name}\n"
                 message += f"Corazones Restantes: {hearts_remaining}\n"
@@ -66,7 +66,7 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
             activos = [maelstrom for maelstrom in maelstroms if maelstrom.get("state") == "Active" and maelstrom != maelstrom_vulnerable]
 
             if activos:
-                message += "\n\n🟠 Maelstroms Activos 🟠\n"
+                message += "\n\n🟠 Maelstroms Activos \n"
                 for maelstrom in activos:
                     name = maelstrom.get("name", "N/A")
                     system_name = maelstrom.get("systemName", "N/A")
