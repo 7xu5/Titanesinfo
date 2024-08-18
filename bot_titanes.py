@@ -61,6 +61,8 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 message += f"Fecha de Destrucción Estimada: {tiempo_estimado}\n"
                 message += "-"*44 + "\n"
             else:
+                message += "\n\n🟢 Maelstrom Completamente Vulnerable \n"
+                message += f" \n"
                 message += "\n\nNo hay maelstroms completamente vulnerables.\n"
 
             # Maelstroms activos
@@ -81,6 +83,8 @@ async def titanesinfo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                     message += f"Sistemas Controlados: {systems_controlled}\n"
                     message += "-"*44 + "\n"
             else:
+                message += "\n\n🟠 Maelstroms Activos \n"
+                message += f" \n"
                 message += "\n\nNo hay maelstroms activos.\n"
 
             # Maelstroms destruidos
