@@ -5,8 +5,12 @@ from dateutil import parser
 
 # Token del bot de Telegram
 
+import os
 
-TOKEN = ${{ secrets.TELEGRAM_BOT_TOKEN }}
+TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+
+if not TOKEN:
+    raise ValueError("El token de Telegram no está configurado en las variables de entorno.")
 
 
 # Función para convertir la fecha en formato ISO 8601 a un formato legible
